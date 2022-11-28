@@ -26,10 +26,8 @@ export const addTask = (evento) => {
   };
 
   list.innerHTML = "";
-
   const taskList = JSON.parse(localStorage.getItem("tasks")) || [];
   taskList.push(taskObject);
-
   localStorage.setItem("tasks", JSON.stringify(taskList));
 
   readTasks();
