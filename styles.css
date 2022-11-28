@@ -20,14 +20,13 @@ main {
 
 form {
   width: 100%;
-  justify-content: space-between;
-  align-items: center;
   display: flex;
   margin-bottom: 15px;
+  justify-content: space-around;
 }
 
 .mainCard {
-  width: 40vw;
+  width: 70vw;
   border-radius: 25px;
   background-color: #fff;
   padding: 25px;
@@ -46,7 +45,7 @@ form {
   padding: 10px;
   border: 1px solid #eee;
   outline: none;
-  width: 45%;
+  width: 55%;
 }
 
 .inputForm::placeholder {
@@ -129,4 +128,31 @@ form {
 .date {
   width: 100%;
   padding: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  form {
+    display: inline-flex;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+  .inputForm {
+    width: 100%;
+  }
+  .inputDate {
+    width: 69%;
+  }
+  .btnCreate {
+    width: 29%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .inputDate {
+    width: 100%;
+  }
+  .btnCreate {
+    width: 100%;
+  }
 }
