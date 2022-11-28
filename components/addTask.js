@@ -62,7 +62,7 @@ export const createTask = ({ value, dateFormat, complete, id }) => {
 
   task.appendChild(taskContent);
   task.appendChild(dateElement);
-  task.appendChild(deleteIcon());
+  task.appendChild(deleteIcon(id));
 
   return task;
 };
