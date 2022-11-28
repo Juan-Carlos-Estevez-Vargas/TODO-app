@@ -2,6 +2,9 @@ import checkComplete from "./checkComplete.js";
 import deleteIcon from "./deleteIcon.js";
 import { readTasks } from "./readTasks.js";
 
+/**
+ * Agrega una nueva tarea a la aplicación.
+ */
 export const addTask = (evento) => {
   evento.preventDefault();
 
@@ -37,6 +40,14 @@ export const addTask = (evento) => {
   readTasks();
 };
 
+/**
+ * Crea una nueva tarea con todos los elementos correspondientes.
+ *
+ * @param {*} param0 Objeto con el los atributos de la tarea a crear
+ * valor, fecha, completada, id.
+ *
+ * @returns Tarea creada con los parámetros solicitados.
+ */
 export const createTask = ({ value, dateFormat, complete, id }) => {
   const task = document.createElement("li");
   task.classList.add("card");

@@ -2,6 +2,10 @@ import { createTask } from "./addTask.js";
 import { uniqueDates, orderDates } from "../services/date.js";
 import dateElement from "./dateElement.js";
 
+/**
+ * Lee los elementos del LocalStorage, ordena dichos elementos por fecha
+ * y los agrega al panel principal.
+ */
 export const readTasks = () => {
   const list = document.querySelector("[data-list]");
   const taskList = JSON.parse(localStorage.getItem("tasks")) || [];
