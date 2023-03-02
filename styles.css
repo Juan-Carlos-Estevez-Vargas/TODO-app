@@ -160,10 +160,16 @@ form {
 }
 
 @media screen and (max-width: 480px) {
+  .mainCard {
+    height: 85%;
+  }
   .inputDate {
-    width: 100%;
+    width: 40%;
   }
   .btnCreate {
-    width: 100%;
+    width: 40%;
+  }
+  .inputForm {
+    width: 70%;
   }
 }
