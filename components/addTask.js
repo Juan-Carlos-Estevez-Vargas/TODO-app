@@ -72,7 +72,9 @@ export const createTask = ({ value, dateFormat, complete, id }) => {
   task.classList.add("card");
 
   const taskContent = document.createElement("div");
+  const iconContent = document.createElement("div");
   const check = checkComplete(id);
+
   if (complete) {
     check.classList.toggle("fas");
     check.classList.toggle("completeIcon");
@@ -87,12 +89,14 @@ export const createTask = ({ value, dateFormat, complete, id }) => {
   titleTask.classList.add("task");
   titleTask.innerText = value;
 
-  taskContent.appendChild(check);
   taskContent.appendChild(titleTask);
 
+  iconContent.classList.add("icons");
+  iconContent.appendChild(check);
+  iconContent.appendChild(deleteIcon(id));
+
   task.appendChild(taskContent);
-  task.appendChild(dateElement);
-  task.appendChild(deleteIcon(id));
+  task.appendChild(iconContent);
 
   return task;
 };

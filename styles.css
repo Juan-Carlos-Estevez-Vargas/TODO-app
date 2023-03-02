@@ -90,6 +90,10 @@ form {
   position: relative;
 }
 
+.icons i {
+  margin: 10%;
+}
+
 .task {
   padding: 10px;
 }
