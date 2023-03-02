@@ -27,11 +27,28 @@ const deleteTask = (id) => {
   const tasks = JSON.parse(localStorage.getItem("tasks"));
   const index = tasks.findIndex((item) => item.id === id);
 
-  tasks.splice(index, 1);
-  li.innerHTML = "";
-  localStorage.setItem("tasks", JSON.stringify(tasks));
-
-  readTasks();
+  Swal.fire({
+    title: "¿Estas seguro?",
+    text: "Estas a punto de eliminar una tarea",
+    icon: "question",
+    showCancelButton: true,
+    confirmButtonColor: "#d33",
+    cancelButtonColor: "#3085d6",
+    confirmButtonText: "Si, elimínalo",
+    cancelButtonText: "Cancelar",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      tasks.splice(index, 1);
+      li.innerHTML = "";
+      localStorage.setItem("tasks", JSON.stringify(tasks));
+      readTasks();
+      Swal.fire(
+        "Tarea Eliminada",
+        "La tarea seleccionada ha sido eliminada con éxito.",
+        "success"
+      );
+    }
+  });
 };
 
 export default deleteIcon;

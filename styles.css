@@ -115,8 +115,12 @@ form {
   color: rgba(62, 161, 219, 1);
 }
 
-.trashIcon:hover {
+.trashIcon {
   color: #f00;
+}
+
+.trashIcon:hover {
+  color: crimson;
 }
 
 .deleteConfirmationPop {
@@ -127,6 +131,7 @@ form {
   top: -100px;
   left: 0;
 }
+
 .deleteSpace {
   position: relative;
   width: 30%;
