@@ -8,8 +8,8 @@
 main {
   background-image: linear-gradient(
     109.6deg,
-    rgba(62, 161, 219, 1) 11.2%,
-    rgba(93, 52, 236, 1) 100.2%
+    rgba(111, 138, 150, 0.5) 11.2%,
+    rgba(140, 158, 159, 0.5) 100.2%
   );
   width: 100vw;
   height: 100vh;
@@ -32,37 +32,39 @@ form {
   padding: 25px;
 }
 
-.title {
-  font-family: "Dosis", sans-serif;
+.icon {
   display: flex;
   justify-content: center;
   align-content: center;
-  margin-bottom: 15px;
+  margin: 1%;
 }
 
 .inputForm {
   border: none;
   padding: 10px;
-  border: 1px solid #eee;
+  border: none;
   outline: none;
-  width: 55%;
+  width: 30%;
+  margin-right: 5%;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
-.inputForm::placeholder {
-  padding: 0px;
+.inputDate {
+  border: none;
+  outline: none;
 }
 
 .btnCreate {
   padding: 10px 15px;
-  background-image: linear-gradient(
-    109.6deg,
-    rgba(62, 161, 219, 1) 11.2%,
-    rgba(93, 52, 236, 1) 100.2%
-  );
+  background-color: #3cb371;
   border: none;
   color: #fff;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.btnCreate:hover {
+  background-color: #2e8b57;
 }
 
 .cardsList {

@@ -14,9 +14,16 @@ export const addTask = (evento) => {
 
   const value = input.value;
   const date = calendar.value;
+  console.log(date);
   const dateFormat = moment(date).format("DD/MM/YYYY");
 
-  if (value === "" || date === "") {
+  if (value === "") {
+    swal("Ooops!", "Debes ingresar un texto!", "warning");
+    return;
+  }
+
+  if (date === "") {
+    swal("Ooops!", "Primer ingresa una fecha!", "warning");
     return;
   }
 
