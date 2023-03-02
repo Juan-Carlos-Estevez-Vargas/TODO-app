@@ -14,7 +14,10 @@ export const addTask = (evento) => {
 
   const value = input.value;
   const date = calendar.value;
-  console.log(date);
+
+  const actualDate = moment(new Date()).format();
+  const momentDate = moment(date).format();
+
   const dateFormat = moment(date).format("DD/MM/YYYY");
 
   if (value === "") {
@@ -24,6 +27,15 @@ export const addTask = (evento) => {
 
   if (date === "") {
     swal("Ooops!", "Primer ingresa una fecha!", "warning");
+    return;
+  }
+
+  if (momentDate < actualDate) {
+    swal(
+      "Error!",
+      "No puedes agendar tareas anteriores a la fecha actual",
+      "error"
+    );
     return;
   }
 
