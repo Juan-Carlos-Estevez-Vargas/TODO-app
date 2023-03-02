@@ -21,17 +21,17 @@ export const addTask = (evento) => {
   const dateFormat = moment(date).format("DD/MM/YYYY");
 
   if (value === "") {
-    swal("Ooops!", "Debes ingresar un texto!", "warning");
+    Swal.fire("Ooops!", "Debes ingresar un texto!", "warning");
     return;
   }
 
   if (date === "") {
-    swal("Ooops!", "Primer ingresa una fecha!", "warning");
+    Swal.fire("Ooops!", "Primer ingresa una fecha!", "warning");
     return;
   }
 
   if (momentDate < actualDate) {
-    swal(
+    Swal.fire(
       "Error!",
       "No puedes agendar tareas anteriores a la fecha actual",
       "error"
