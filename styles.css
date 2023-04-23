@@ -13,6 +13,12 @@ main {
   justify-content: center;
 }
 
+.mainCard {
+  width: 80%;
+  background-color: #fff;
+  padding: 25px;
+}
+
 form {
   width: 100%;
   display: flex;
@@ -20,39 +26,34 @@ form {
   justify-content: space-around;
 }
 
-.mainCard {
-  width: 80%;
-  background-color: #fff;
-  padding: 25px;
-}
-
 .icon {
   display: flex;
   justify-content: center;
   align-content: center;
   margin: 1%;
+  cursor: pointer;
 }
 
 .inputForm {
   border: none;
-  padding: 10px;
-  border: none;
   outline: none;
-  width: 30%;
-  margin-right: 5%;
+  width: 35%;
+  font-size: 22px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 .inputDate {
   border: none;
   outline: none;
+  font-size: 22px;
+  margin-top: 1%;
 }
 
 .btnCreate {
   padding: 10px 15px;
   background-color: #3cb371;
   border: none;
-  color: #fff;
+  color: white;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -97,10 +98,6 @@ form {
   padding: 10px;
 }
 
-.icon {
-  cursor: pointer;
-}
-
 .icon:hover {
   color: rgba(62, 161, 219, 1);
 }
@@ -117,24 +114,6 @@ form {
   color: crimson;
 }
 
-.deleteConfirmationPop {
-  position: relative;
-  background-color: rgba(255, 255, 255);
-  z-index: 99;
-  width: 100%;
-  top: -100px;
-  left: 0;
-}
-
-.deleteSpace {
-  position: relative;
-  width: 30%;
-}
-
-.noTasks {
-  font-size: 48px;
-}
-
 .date {
   width: 100%;
   padding: 15px;
@@ -147,12 +126,21 @@ form {
     flex-wrap: wrap;
     align-items: stretch;
   }
-  .inputForm {
-    width: 100%;
+
+  .icon {
+    margin-bottom: 5%;
   }
+
+  .inputForm {
+    width: 80%;
+    margin-bottom: 5%;
+    font-size: larger;
+  }
+
   .inputDate {
     width: 69%;
   }
+
   .btnCreate {
     width: 29%;
   }
@@ -162,13 +150,18 @@ form {
   .mainCard {
     height: 85%;
   }
+
   .inputDate {
     width: 40%;
   }
+
   .btnCreate {
     width: 40%;
   }
+
   .inputForm {
     width: 70%;
+    margin-bottom: 5%;
+    font-size: larger;
   }
 }

@@ -1,4 +1,4 @@
-import checkComplete from "./checkComplete.js";
+import { checkComplete } from "./checkComplete.js";
 import deleteIcon from "./deleteIcon.js";
 import { readTasks } from "./readTasks.js";
 
@@ -17,11 +17,10 @@ export const addTask = (evento) => {
 
   const actualDate = moment(new Date()).format();
   const momentDate = moment(date).format();
-
   const dateFormat = moment(date).format("DD/MM/YYYY");
 
   if (value === "") {
-    Swal.fire("Ooops!", "Debes ingresar un texto!", "warning");
+    Swal.fire("Ooops!", "Debes ingresa un texto", "warning");
     return;
   }
 
@@ -41,7 +40,6 @@ export const addTask = (evento) => {
 
   input.value = "";
   calendar.value = "";
-
   const complete = false;
 
   const taskObject = {
@@ -87,7 +85,7 @@ export const createTask = ({ value, dateFormat, complete, id }) => {
   dateElement.innerHTML = dateFormat;
 
   titleTask.classList.add("task");
-  titleTask.innerText = value;
+  titleTask.innerHTML = value;
 
   taskContent.appendChild(titleTask);
 

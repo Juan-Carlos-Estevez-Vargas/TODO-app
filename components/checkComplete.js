@@ -6,7 +6,7 @@
  * @returns Elemento con los estilos necesarios según si la tarea ha sido
  * marcada como completada o no.
  */
-const checkComplete = (id) => {
+export const checkComplete = (id) => {
   const i = document.createElement("i");
   i.classList.add("far", "fa-check-square", "icon");
   i.addEventListener("click", (event) => completeTask(event, id));

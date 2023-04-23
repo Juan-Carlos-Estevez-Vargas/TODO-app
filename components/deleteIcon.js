@@ -23,7 +23,7 @@ const deleteIcon = (id) => {
  * seleccionada por el usuario.
  */
 const deleteTask = (id) => {
-  const li = document.querySelector("[data-list]");
+  const li = document.querySelector("[data-list");
   const tasks = JSON.parse(localStorage.getItem("tasks"));
   const index = tasks.findIndex((item) => item.id === id);
 
@@ -35,7 +35,7 @@ const deleteTask = (id) => {
     confirmButtonColor: "#d33",
     cancelButtonColor: "#3085d6",
     confirmButtonText: "Si, elimínalo",
-    cancelButtonText: "Cancelar",
+    cancelButtonText: "Cancel",
   }).then((result) => {
     if (result.isConfirmed) {
       tasks.splice(index, 1);
@@ -44,7 +44,7 @@ const deleteTask = (id) => {
       readTasks();
       Swal.fire(
         "Tarea Eliminada",
-        "La tarea seleccionada ha sido eliminada con éxito.",
+        "La tarea ha sido eliminada con éxito",
         "success"
       );
     }
