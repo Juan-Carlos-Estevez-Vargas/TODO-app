@@ -2,6 +2,8 @@
 
 Aplicación de tareas encargada de añadir TODOS, ordenarlos por fechas y agregarlos a LocalStorage. El proyecto se realizó bajo la supervisión de @alura y es una mejora del mismo
 
+Puedes ver el funcionamiento y construcción del proyecto en [mi canal de YouTube](https://www.youtube.com/watch?v=laBMZ2nXLZA)
+
 Para el correcto funcionamiento del sitio se necesitan las siguientes librerías:
  - [Moment JS](https://momentjs.com/)
  
